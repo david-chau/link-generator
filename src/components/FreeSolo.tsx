@@ -5,17 +5,17 @@ import './FreeSolo.css';
 interface FreeSoloProps {
     text: string,
     setText: (value: string) => void;
+    options: string[];
 }
 
 const FreeSolo = (props: FreeSoloProps) => {
-    const { text, setText } = props;
+    const { text, setText, options } = props;
 
     return (
         <div className={'free-solo'}>
             <Autocomplete
-                id="free-solo-demo"
                 freeSolo
-                options={top100Films.map((option) => option.title)}
+                options={options}
                 renderInput={(params) => <TextField {...params} label="Text" />}
                 value={text}
                 onChange={(e: SyntheticEvent) => {
