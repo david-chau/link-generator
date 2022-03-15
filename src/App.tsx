@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from "@mui/material";
+import { Link, Typography } from "@mui/material";
 import FreeSolo from './components/FreeSolo';
 import links from './links.json';
 import options from './options.json';
@@ -19,7 +19,9 @@ const App = () => {
             {!!text && Object
                 .entries(links)
                 .map(([key, value]) =>
-                    <Link target="_blank" key={key} href={`${value}${text}`}>{key}</Link>)}
+                    <Link target="_blank" key={key} href={`${value}${text}`}>
+                        <Typography key={key} variant={"body1"}>{key}</Typography>
+                    </Link>)}
         </div>
     );
 }
