@@ -15,7 +15,7 @@ const App = () => {
           />
             {!!text && Object
                 .entries(links)
-                .map(([key, value]) => <Link key={key} href={`${value}${text}`}>{key}</Link>)}
+                .map(([key, value]) => <Link target="_blank" key={key} href={`${value}${text}`}>{key}</Link>)}
         </div>
     );
 }

@@ -16,7 +16,7 @@ const FreeSolo = (props: FreeSoloProps) => {
                 id="free-solo-demo"
                 freeSolo
                 options={top100Films.map((option) => option.title)}
-                renderInput={(params) => <TextField {...params} label="freeSolo" />}
+                renderInput={(params) => <TextField {...params} label="Text" />}
                 value={text}
                 onChange={(e: SyntheticEvent) => {
                     // @ts-ignore
